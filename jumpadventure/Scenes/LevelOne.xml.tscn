@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxeriegyi1ser"]
+
+[ext_resource type="Texture2D" uid="uid://cxi1f6kk1oft1" path="res://Textures/grass.webp" id="1_0wchd"]
+[ext_resource type="Texture2D" uid="uid://cgkgwpbddasi6" path="res://Textures/Slime_Block.png" id="2_6p06i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srbxm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8m5p2"]
+
+[node name="World" type="Node2D"]
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(320, 328)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+scale = Vector2(5, 0.5)
+texture = ExtResource("1_0wchd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+scale = Vector2(32, 3)
+shape = SubResource("RectangleShape2D_srbxm")
+
+[node name="slime" type="RigidBody2D" parent="."]
+position = Vector2(320, 256)
+
+[node name="Sprite2D" type="Sprite2D" parent="slime"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_6p06i")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime"]
+scale = Vector2(1.25, 1.25)
+shape = SubResource("RectangleShape2D_8m5p2")
+
+[node name="walls" type="StaticBody2D" parent="."]
+
+[node name="LeftWall" type="CollisionPolygon2D" parent="walls"]
+position = Vector2(-10, 150)
+scale = Vector2(1, 15)
+
+[node name="Ceiling" type="CollisionPolygon2D" parent="walls"]
+position = Vector2(325, -5)
+scale = Vector2(35, 1)
+
+[node name="RightWall" type="CollisionPolygon2D" parent="walls"]
+position = Vector2(650, 150)
+scale = Vector2(1, 15)
