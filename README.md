@@ -9,6 +9,6 @@ Skákací Hra je zábavná platformová hra, ve které hráči skáčou přes p�
 - **Skórovací systém**: Získávejte body za překonávání překážek.
 
 ## Technologie
-- **Jazyk**: ...
+- **Jazyk**: GDScripts
 - **Framework**: Godot Engine
 - **Grafika**: 2D sprite, pixel art
