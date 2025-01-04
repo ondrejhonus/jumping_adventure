@@ -25,9 +25,10 @@ offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Game_name" type="TextEdit" parent="VBoxContainer"]
+[node name="H" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Jumping Adventure"
+text = "Jumping  Adventure"
+horizontal_alignment = 1
 
 [node name="START" type="Button" parent="VBoxContainer"]
 layout_mode = 2

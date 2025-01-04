@@ -58,6 +58,7 @@ _data = {
 }
 
 [node name="Intro" type="Node2D"]
+scale = Vector2(3.00343, 2.68706)
 script = ExtResource("1_dcvfw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

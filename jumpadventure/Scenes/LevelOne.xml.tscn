@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxeriegyi1ser"]
+[gd_scene load_steps=8 format=3 uid="uid://bxeriegyi1ser"]
 
 [ext_resource type="Texture2D" uid="uid://uuu60yidb2ig" path="res://Textures/block.jpg" id="1_pl354"]
 [ext_resource type="Script" path="res://Scenes/slime.gd" id="2_8n3i1"]
 [ext_resource type="Texture2D" uid="uid://dspbh830uh0tc" path="res://Textures/dirt.jpg" id="2_wk88e"]
 [ext_resource type="Texture2D" uid="uid://ce33i47b47qyk" path="res://Textures/grass-removebg-preview.png" id="3_84512"]
+[ext_resource type="Texture2D" uid="uid://cxdduo3w5su5o" path="res://Textures/movement-removebg-preview.png" id="5_3v50w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srbxm"]
 size = Vector2(416.011, 37.8442)
@@ -12,6 +13,12 @@ size = Vector2(416.011, 37.8442)
 size = Vector2(24, 48)
 
 [node name="World" type="Node2D"]
+position = Vector2(560, 352)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 128)
+scale = Vector2(0.268561, 0.272817)
+texture = ExtResource("5_3v50w")
 
 [node name="ground" type="StaticBody2D" parent="."]
 position = Vector2(16, 320)
@@ -141,5 +148,4 @@ shape = SubResource("RectangleShape2D_djc6e")
 one_way_collision_margin = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 32)
 polygon = PackedVector2Array(0, 0, 0, 360, -24, 360, -24, -24, 664, -24, 664, 360, 640, 360, 640, 0, 0, 0)
