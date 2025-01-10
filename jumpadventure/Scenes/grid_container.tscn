@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmvvsaanyxdvy"]
+
+[ext_resource type="PackedScene" uid="uid://dnf81v8cja5wo" path="res://Scenes/level_list.tscn" id="1_x6lyw"]
+
+[node name="GridContainer" type="GridContainer"]
+custom_minimum_size = Vector2(1644, 876)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="LevelButton" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2
+
+[node name="LevelButton3" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2
+
+[node name="LevelButton4" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2
+
+[node name="LevelButton5" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2
+
+[node name="LevelButton6" parent="." instance=ExtResource("1_x6lyw")]
+layout_mode = 2

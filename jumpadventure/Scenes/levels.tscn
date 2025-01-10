@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqyg8w4ob4dmg"]
+
+[ext_resource type="PackedScene" uid="uid://dmvvsaanyxdvy" path="res://Scenes/grid_container.tscn" id="1_augwa"]
+[ext_resource type="Script" path="res://Scenes/levels.gd" id="1_cro71"]
+[ext_resource type="Texture2D" uid="uid://ckwp7pgbai5jj" path="res://Textures/Button.png" id="2_ru1ie"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baneh"]
+atlas = ExtResource("2_ru1ie")
+region = Rect2(606, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36ea1"]
+atlas = ExtResource("2_ru1ie")
+region = Rect2(606, 1190, 181, 190)
+
+[node name="Levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cro71")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Menu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -832.0
+offset_top = -412.0
+offset_right = 832.0
+offset_bottom = 420.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Menu"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.847814, 0.775705)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/Control"]
+custom_minimum_size = Vector2(3292, 876)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -416.0
+offset_right = 3297.0
+offset_bottom = 460.0
+grow_vertical = 2
+
+[node name="GridContainer" parent="Menu/Control/HBoxContainer" instance=ExtResource("1_augwa")]
+layout_mode = 2
+
+[node name="GridContainer2" parent="Menu/Control/HBoxContainer" instance=ExtResource("1_augwa")]
+layout_mode = 2
+
+[node name="GridContainer3" parent="Menu/Control/HBoxContainer" instance=ExtResource("1_augwa")]
+layout_mode = 2
+
+[node name="GridContainer4" parent="Menu/Control/HBoxContainer" instance=ExtResource("1_augwa")]
+layout_mode = 2
+
+[node name="levelDificulty" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.5
+offset_right = 39.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Level Easy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -72.0
+offset_right = -3.0
+offset_bottom = 118.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_baneh")
+
+[node name="Back" type="TextureButton" parent="Menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -72.0
+offset_right = 181.0
+offset_bottom = 118.0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_36ea1")
+
+[connection signal="pressed" from="Menu/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Menu/Back" to="." method="_on_back_pressed"]
