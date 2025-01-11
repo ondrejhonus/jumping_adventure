@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxeriegyi1ser"]
+[gd_scene load_steps=10 format=3 uid="uid://bxeriegyi1ser"]
 
 [ext_resource type="Texture2D" uid="uid://uuu60yidb2ig" path="res://Textures/block.jpg" id="1_pl354"]
 [ext_resource type="Script" path="res://Scenes/slime.gd" id="2_8n3i1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ce33i47b47qyk" path="res://Textures/grass-removebg-preview.png" id="3_84512"]
 [ext_resource type="Texture2D" uid="uid://cxdduo3w5su5o" path="res://Textures/movement-removebg-preview.png" id="5_3v50w"]
 [ext_resource type="PackedScene" uid="uid://cuubwuprsdaf8" path="res://Scenes/item.tscn" id="6_i83ia"]
+[ext_resource type="PackedScene" uid="uid://3gxehdfionwg" path="res://Scenes/character.tscn" id="7_lih8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srbxm"]
 size = Vector2(416.011, 37.8442)
@@ -154,3 +155,6 @@ polygon = PackedVector2Array(0, 0, 0, 360, -24, 360, -24, -24, 664, -24, 664, 36
 [node name="item" parent="." instance=ExtResource("6_i83ia")]
 position = Vector2(456, 288)
 scale = Vector2(0.15, 0.15)
+
+[node name="Character" parent="." instance=ExtResource("7_lih8b")]
+position = Vector2(192, 304)

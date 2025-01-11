@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://3gxehdfionwg"]
+
+[ext_resource type="Script" path="res://Scenes/character_pixel.gd" id="1_fgbr8"]
+[ext_resource type="Texture2D" uid="uid://clvo84p3xryvy" path="res://Textures/pixel_character.png" id="2_mto30"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2rr4"]
+size = Vector2(8, 16)
+
+[sub_resource type="Animation" id="Animation_b55qx"]
+resource_name = "Stand"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_pm8j7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_wq3qt"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 3]
+}
+
+[sub_resource type="Animation" id="Animation_sd273"]
+resource_name = "jump"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CharacterBody2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mj8ts"]
+_data = {
+"RESET": SubResource("Animation_pm8j7"),
+"Stand": SubResource("Animation_b55qx"),
+"jump": SubResource("Animation_sd273"),
+"run": SubResource("Animation_wq3qt")
+}
+
+[node name="Character" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+platform_wall_layers = 255
+script = ExtResource("1_fgbr8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(3, -7)
+texture = ExtResource("2_mto30")
+hframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_j2rr4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+root_node = NodePath("")
+libraries = {
+"": SubResource("AnimationLibrary_mj8ts")
+}
