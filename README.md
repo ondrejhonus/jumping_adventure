@@ -13,9 +13,9 @@ Skákací Hra je zábavná platformová hra, ve které hráči skáčou přes p�
 - **Framework**: Godot Engine, Krita, Tilesetter
 - **Grafika**: 2D sprite, pixel art
 ## Odkazy na Framework
-https://godotengine.org/
-https://krita.org/en/
-https://www.tilesetter.org/
+- https://godotengine.org/
+- https://krita.org/en/
+- https://www.tilesetter.org/
 
 ## Godot Engine
 Engine pro psaní kódu hry
