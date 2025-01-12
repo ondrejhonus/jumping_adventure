@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://jcrup42t2v8q"]
+[gd_scene load_steps=3 format=3 uid="uid://jcrup42t2v8q"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_gccfy"]
+[ext_resource type="Texture2D" uid="uid://c67hy74hbcnjn" path="res://Textures/deniobloha.png" id="2_xh387"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gccfy")
+
+[node name="BackGround" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xh387")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
