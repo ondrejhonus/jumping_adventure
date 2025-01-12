@@ -16,20 +16,43 @@ var dialog = [
 ]
 
 var page = 0
+var timer : Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_process_input(true)
+	text = ""  # Clear text to start fresh
+	visible_characters = 0
+	
+	# Add a Timer node dynamically if not already in the scene
+	timer = Timer.new()
+	add_child(timer)
+	timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+	timer.wait_time = 0.05  # Adjust the speed of character reveal
+	timer.start()
+	
+	show_page()  # Show the first page
+
+# Function to handle showing a new page
+func show_page() -> void:
 	text = dialog[page]
 	visible_characters = 0
+	timer.start()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if visible_characters >= get_total_character_count():
 			if page < dialog.size() - 1:
 				page += 1
-				text = dialog[page]
-				visible_characters = 0
+				show_page()
+			else:
+				print("End of dialog.")
+		else:
+			# Skip to show the full text instantly
+			visible_characters = get_total_character_count()
 
 func _on_timer_timeout() -> void:
-	visible_characters += 1
+	if visible_characters < get_total_character_count():
+		visible_characters += 1
+	else:
+		timer.stop()  # Stop the timer when all characters are visible

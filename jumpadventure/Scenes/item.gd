@@ -5,7 +5,7 @@ var showInteractionLabel = false
 func _ready() -> void:
 	$Label.visible = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Label.visible = showInteractionLabel
 	
 	# Kontrola interakce

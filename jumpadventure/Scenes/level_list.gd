@@ -22,4 +22,6 @@ func level_state(value: bool) -> void:
 	$Label.visible = not value
 
 func _on_pressed():
-	level_selected.emit(level_num)
+	if not locked:
+		get_tree().change_scene("res://Scenes/Levels/level_%d.tscn" % level_num)
+		level_selected.emit(level_num)
