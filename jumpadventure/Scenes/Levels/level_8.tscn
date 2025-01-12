@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://cft357tnjdxo5"]
+[gd_scene load_steps=3 format=3 uid="uid://cft357tnjdxo5"]
+
+[ext_resource type="PackedScene" uid="uid://cuubwuprsdaf8" path="res://Scenes/item.tscn" id="1_je48c"]
+[ext_resource type="PackedScene" uid="uid://3gxehdfionwg" path="res://Scenes/character.tscn" id="2_6vtst"]
 
 [node name="Level8" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="item" parent="." instance=ExtResource("1_je48c")]
+scale = Vector2(0.05, 0.05)
+
+[node name="Character" parent="." instance=ExtResource("2_6vtst")]
