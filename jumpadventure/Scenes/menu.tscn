@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://jcrup42t2v8q"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_gccfy"]
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_gccfy"]
 [ext_resource type="Texture2D" uid="uid://c67hy74hbcnjn" path="res://Textures/deniobloha.png" id="2_xh387"]
 
 [node name="Menu" type="Control"]
