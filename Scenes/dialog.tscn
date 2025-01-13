@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://btqlq0rmvfoql"]
+
+[ext_resource type="Script" path="res://Scenes/rich_text_label.gd" id="1_8neug"]
+
+[node name="dialog" type="Polygon2D"]
+color = Color(0.136826, 0.136826, 0.136826, 1)
+polygon = PackedVector2Array(16, 96, 16, 168, 304, 168, 304, 88, 16, 88)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 32.0
+offset_top = 104.0
+offset_right = 288.0
+offset_bottom = 152.0
+text = "Welcome in my game Jumping Adventure"
+script = ExtResource("1_8neug")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_timer_timeout"]

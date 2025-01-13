@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnf81v8cja5wo"]
+
+[ext_resource type="Texture2D" uid="uid://24olih5cy5ub" path="res://Textures/button_atlas_texture.tres" id="1_lecw2"]
+[ext_resource type="Texture2D" uid="uid://ckwp7pgbai5jj" path="res://Textures/Button.png" id="2_grbig"]
+[ext_resource type="Script" path="res://Scenes/level_list.gd" id="3_myrxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oloa"]
+atlas = ExtResource("2_grbig")
+region = Rect2(1389, 668, 182, 189)
+
+[node name="LevelButton" type="TextureButton"]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource("1_lecw2")
+texture_disabled = SubResource("AtlasTexture_0oloa")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_myrxw")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
