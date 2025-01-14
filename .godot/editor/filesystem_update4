@@ -1,12 +1,3 @@
-res://Scenes/character.tscn
-res://Scenes/dialog.tscn
-res://Scenes/intro.tscn
-res://Scenes/item.tscn
-res://Scenes/levels.tscn
-res://Scenes/level_list.tscn
-res://Scenes/menu.tscn
-res://Scenes/options.tscn
-res://Scenes/Levels/level_1.tscn
 res://Scenes/grid_container.tscn
-res://Scenes/LevelOne.xml.tscn
-res://Scenes/tile_map.tscn
+res://Scripts/globals.gd
+res://Scenes/menu.tscn
