@@ -13,18 +13,24 @@ columns = 3
 
 [node name="LevelButton" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null
 
 [node name="LevelButton2" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null
 
 [node name="LevelButton3" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null
 
 [node name="LevelButton4" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null
 
 [node name="LevelButton5" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null
 
 [node name="LevelButton6" parent="." instance=ExtResource("1_x6lyw")]
 layout_mode = 2
+script = null

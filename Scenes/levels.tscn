@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dqyg8w4ob4dmg"]
 
 [ext_resource type="PackedScene" uid="uid://dmvvsaanyxdvy" path="res://Scenes/grid_container.tscn" id="1_augwa"]
-[ext_resource type="Script" path="res://Scenes/levels.gd" id="1_cro71"]
+[ext_resource type="Script" path="res://Scripts/levels.gd" id="1_cro71"]
 [ext_resource type="Texture2D" uid="uid://hcoi6ih6krpp" path="res://Textures/nocniobloha.png" id="2_j0a2g"]
 [ext_resource type="Texture2D" uid="uid://ckwp7pgbai5jj" path="res://Textures/Button.png" id="2_ru1ie"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://24olih5cy5ub" path="res://Textures/button_atlas_texture.tres" id="1_lecw2"]
 [ext_resource type="Texture2D" uid="uid://ckwp7pgbai5jj" path="res://Textures/Button.png" id="2_grbig"]
-[ext_resource type="Script" path="res://Scenes/level_list.gd" id="3_myrxw"]
+[ext_resource type="Script" path="res://Scripts/level_list.gd" id="3_myrxw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oloa"]
 atlas = ExtResource("2_grbig")

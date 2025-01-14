@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btqlq0rmvfoql"]
 
-[ext_resource type="Script" path="res://Scenes/rich_text_label.gd" id="1_8neug"]
+[ext_resource type="Script" path="res://Scripts/rich_text_label.gd" id="1_8neug"]
 
 [node name="dialog" type="Polygon2D"]
 color = Color(0.136826, 0.136826, 0.136826, 1)
