@@ -1,25 +1,20 @@
-# Skákací Hra - Jumping Adventure
+# Jumping Adventure
 
-## Popis
-Skákací Hra je zábavná platformová hra, ve které hráči skáčou přes překážky a postupují skrze různé úrovně. Cílem hry je dosáhnout co nejvyššího skóre a překonat všechny úrovně plné výzev.
+## About
+Jumping Adventure is a fun platform game where players jump over obstacles and progress through various levels. The goal of the game is to achieve the highest score and overcome all the challenging levels.
 
-## Funkce
-- **Různé úrovně**: Každá úroveň přináší nové překážky a výzvy.
-- **Skákací Mechanika**: Intuitivní ovládání pro skákání a pohyb.
-- **Skórovací systém**: Získávejte body za překonávání překážek.
+## Features
+- **Various Levels**: Each level brings new obstacles and challenges.
+- **Jumping Mechanics**: Intuitive controls for jumping and movement.
+- **Scoring System**: Earn points by overcoming obstacles.
 
-## Technologie
-- **Jazyk**: GDScripts
-- **Framework**: Godot Engine, Krita, Tilesetter
-- **Grafika**: 2D sprite, pixel art
-## Odkazy na Framework
-- https://godotengine.org/
-- https://krita.org/en/
-- https://www.tilesetter.org/
+## Technology
+- **Language**: GDScript (Godot's default language)
+- **Engine**: [Godot Engine](https://godotengine.org/)
+- **Graphics**: Aseprite, [Krita](https://krita.org/en/) (Photoshop like software), [Tilesetter](https://www.tilesetter.org/) (2D Map creator)
 
-## Godot Engine
-Engine pro psaní kódu hry
-## Krita
-Tvorba textur pro hru
-## Tilesetter
-Vytváří z textur texturové mapy
+## Authors
+### Original Author: [Filip Kožaný](https://github.com/FilipKOZANY/MaturitniProjekt)
+### Fork Authors: 
+- ### **[Ondřej Honus](https://github.com/ondrejhonus)**
+- ### **[Walter Oboňa](https://github.com/Dvojak)**
